@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.ListSelectionView?>
+
+<DialogPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.addStudents.AddStudents">
+   <content>
+      <AnchorPane fx:id="addStudentMainAnchor" prefHeight="680.0" prefWidth="1047.0">
+         <ScrollPane hbarPolicy="NEVER" layoutY="20.0" prefHeight="635.0" prefWidth="670.0">
+            <AnchorPane prefHeight="1200.0" prefWidth="600.0">
+               <VBox layoutX="12.0" layoutY="50.0" prefHeight="580.0" prefWidth="300.0" styleClass="dashboard-cards-body">
+                  <effect>
+                     <DropShadow color="#969191" />
+                  </effect>
+                  <AnchorPane prefHeight="5.0" prefWidth="300.0">
+                     <AnchorPane layoutX="14.0" layoutY="-30.0" prefHeight="50.0" prefWidth="150.0" styleClass="add-page-cards-header">
+                        <effect>
+                           <DropShadow color="#969191" height="3.75" radius="1.5625" width="4.5" />
+                        </effect>
+                        <Label alignment="CENTER" layoutX="7.0" layoutY="1.0" prefHeight="45.0" prefWidth="139.0" text="PERSONAL INFO" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="15.0" />
+                           </font>
+                        </Label>
+                     </AnchorPane>
+                  </AnchorPane>
+                  <JFXTextField fx:id="firstname" focusColor="#4889fe" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#progressWorker" prefHeight="40.0" prefWidth="280.0" promptText="FIRST NAME">
+                     <VBox.margin>
+                        <Insets left="10.0" top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="middlename" focusColor="#4889fe" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#progressWorker" prefHeight="40.0" prefWidth="280.0" promptText="MIDDLE NAME">
+                     <VBox.margin>
+                        <Insets left="10.0" top="35.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="lastname" focusColor="#4889fe" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#progressWorker" prefHeight="40.0" prefWidth="280.0" promptText="LAST NAME">
+                     <VBox.margin>
+                        <Insets left="10.0" top="35.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <HBox fx:id="personalInfo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="280.0" spacing="20.0">
+                     <VBox.margin>
+                        <Insets left="10.0" top="35.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXDatePicker fx:id="dateOfBirth" defaultColor="#4889fe" onAction="#progressWorkers" prefHeight="40.0" prefWidth="150.0" promptText="DATE OF BIRTH" showWeekNumbers="true">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXDatePicker>
+                        <JFXComboBox fx:id="gender" focusColor="#4889fe" onAction="#progressWorkers" prefHeight="40.0" prefWidth="150.0" promptText="SELECT GENDER">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                     </children>
+                  </HBox>
+                  <JFXTextArea fx:id="nationality" focusColor="#4889fe" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#progressWorker" prefHeight="40.0" prefWidth="280.0" promptText="NATIONALITY">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" top="35.0" />
+                     </VBox.margin>
+                  </JFXTextArea>
+                  <HBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="280.0">
+                     <children>
+                        <JFXCheckBox fx:id="disabled" checkedColor="#4889fe" onAction="#progressWorkers" text="Disabled?">
+                           <HBox.margin>
+                              <Insets left="20.0" top="40.0" />
+                           </HBox.margin>
+                        </JFXCheckBox>
+                        <JFXTextArea fx:id="disability" focusColor="#4889fe" maxHeight="-Infinity" prefHeight="30.0" prefWidth="240.0" promptText="DISABILITY">
+                           <HBox.margin>
+                              <Insets left="20.0" top="25.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI Semibold" size="14.0" />
+                           </font>
+                        </JFXTextArea>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+               </VBox>
+               <VBox layoutX="335.0" layoutY="50.0" minWidth="-Infinity" prefHeight="580.0" prefWidth="300.0">
+                  <children>
+                     <AnchorPane layoutY="30.0" prefHeight="280.0" prefWidth="300.0" styleClass="dashboard-cards-body">
+                        <children>
+                           <AnchorPane layoutX="14.0" layoutY="-30.0" prefHeight="50.0" prefWidth="160.0" styleClass="add-page-cards-header">
+                              <effect>
+                                 <DropShadow color="#bfbdbd" height="10.0" radius="4.5" width="10.0" />
+                              </effect>
+                              <children>
+                                 <Label alignment="CENTER" layoutX="7.0" layoutY="1.0" prefHeight="45.0" prefWidth="159.0" text="SCHOOL DATA" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                       <Font name="Segoe UI Semibold" size="15.0" />
+                                    </font>
+                                 </Label>
+                              </children>
+                           </AnchorPane>
+                           <VBox fx:id="schoolData" layoutX="8.0" layoutY="65.0" spacing="30.0">
+                              <children>
+                                 <JFXComboBox fx:id="selectSchool" focusColor="#4889fe" onAction="#progressWorkers" prefHeight="40.0" prefWidth="280.0" promptText="SELECT SCHOOL">
+                                    <VBox.margin>
+                                       <Insets left="5.0" />
+                                    </VBox.margin>
+                                 </JFXComboBox>
+                                 <JFXComboBox fx:id="selectClass" focusColor="#4889fe" onAction="#progressWorkers" prefHeight="40.0" prefWidth="280.0" promptText="SELECT CLASS" />
+                              </children>
+                           </VBox>
+                        </children>
+                        <VBox.margin>
+                           <Insets />
+                        </VBox.margin>
+                     </AnchorPane>
+                     <AnchorPane prefHeight="350.0" prefWidth="300.0" styleClass="dashboard-cards-body">
+                        <children>
+                           <AnchorPane layoutX="14.0" layoutY="-30.0" prefHeight="50.0" prefWidth="250.0" styleClass="add-page-cards-header">
+                              <effect>
+                                 <DropShadow height="1.5" radius="1.0" width="4.5" />
+                              </effect>
+                              <children>
+                                 <Label alignment="CENTER" layoutX="7.0" layoutY="1.0" prefHeight="45.0" prefWidth="241.0" text="PARENT/GUARDIAN INFO" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                       <Font name="Segoe UI Semibold" size="15.0" />
+                                    </font>
+                                 </Label>
+                              </children>
+                           </AnchorPane>
+                           <JFXTextField fx:id="nameOfParent" focusColor="#4889fe" labelFloat="true" layoutX="10.0" layoutY="50.0" onKeyTyped="#progressWorker" prefHeight="40.0" prefWidth="280.0" promptText="NAME OF PARENT/GUARDIAN">
+                              <font>
+                                 <Font name="Segoe UI Semibold" size="13.0" />
+                              </font>
+                           </JFXTextField>
+                           <JFXTextField fx:id="parentPhNo" focusColor="#4889fe" labelFloat="true" layoutX="10.0" layoutY="130.0" onKeyTyped="#progressWorker" prefHeight="40.0" prefWidth="280.0" promptText="PHONE NUMBER">
+                              <font>
+                                 <Font name="Segoe UI Semibold" size="13.0" />
+                              </font>
+                           </JFXTextField>
+                           <JFXTextField fx:id="parentEmail" focusColor="#4889fe" labelFloat="true" layoutX="10.0" layoutY="210.0" onKeyTyped="#progressWorker" prefHeight="40.0" prefWidth="280.0" promptText="EMAIL">
+                              <font>
+                                 <Font name="Segoe UI Semibold" size="13.0" />
+                              </font>
+                           </JFXTextField>
+                        </children>
+                        <VBox.margin>
+                           <Insets top="60.0" />
+                        </VBox.margin>
+                     </AnchorPane>
+                  </children>
+                  <effect>
+                     <DropShadow color="#969191" />
+                  </effect>
+               </VBox>
+               <AnchorPane layoutX="9.0" layoutY="700.0" maxHeight="-Infinity" prefHeight="450.0" prefWidth="500.0" styleClass="dashboard-cards-body">
+                  <children>
+                     <AnchorPane layoutX="14.0" layoutY="-30.0" prefHeight="50.0" prefWidth="160.0" styleClass="add-page-cards-header">
+                        <effect>
+                           <DropShadow height="1.5" radius="1.0" width="4.5" />
+                        </effect>
+                        <children>
+                           <Label alignment="CENTER" layoutX="7.0" layoutY="1.0" prefHeight="45.0" prefWidth="159.0" text="SUBJECTS" textAlignment="CENTER" textFill="WHITE">
+                              <font>
+                                 <Font name="Segoe UI Semibold" size="15.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </AnchorPane>
+                     <ListSelectionView fx:id="subjectSelection" layoutX="2.0" layoutY="24.0" onMouseClicked="#listViewProgress" prefHeight="418.0" prefWidth="620.0" />
+                  </children>
+                  <effect>
+                     <DropShadow color="#969191" />
+                  </effect>
+               </AnchorPane>
+            </AnchorPane>
+         </ScrollPane>
+         <VBox layoutX="680.0" layoutY="40.0" prefHeight="600.0" prefWidth="340.0" styleClass="dashboard-cards-body">
+            <children>
+               <Pane prefHeight="240.0" prefWidth="331.0" style="-fx-background-color: #eeeeee;">
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
+                  <children>
+                     <AnchorPane layoutY="-1.0" prefHeight="241.0" prefWidth="159.0" styleClass="add-page-fee">
+                        <children>
+                           <Label alignment="CENTER" layoutX="12.0" layoutY="38.0" prefHeight="39.0" prefWidth="136.0" styleClass="add-page-cards-header" text="School Fee " textFill="WHITE">
+                              <font>
+                                 <Font name="Segoe UI Semibold" size="16.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="schoolFee" alignment="CENTER" layoutX="12.0" layoutY="108.0" prefHeight="39.0" prefWidth="136.0" text="45757457" textFill="#464343">
+                              <font>
+                                 <Font name="Segoe UI Semibold" size="20.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </AnchorPane>
+                     <JFXTextField fx:id="amount" focusColor="#4889fe" labelFloat="true" layoutX="170.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="159.0" promptText="Amount">
+                        <font>
+                           <Font name="Segoe UI Semibold" size="14.0" />
+                        </font>
+                     </JFXTextField>
+                     <JFXTextField fx:id="balance" focusColor="#4889fe" labelFloat="true" layoutX="170.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="159.0" promptText="Balance">
+                        <font>
+                           <Font name="Segoe UI Semibold" size="14.0" />
+                        </font>
+                     </JFXTextField>
+                  </children>
+               </Pane>
+               <ProgressBar fx:id="progressBar" prefHeight="33.0" prefWidth="296.0" progress="0.0" style="-fx-accent: rgba(72, 137, 254, 0.7);">
+                  <VBox.margin>
+                     <Insets left="20.0" top="50.0" />
+                  </VBox.margin>
+               </ProgressBar>
+               <Label fx:id="progressIndiator" alignment="CENTER" prefHeight="25.0" prefWidth="114.0" text="Label">
+                  <font>
+                     <Font name="Segoe UI Semibold" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="110.0" />
+                  </VBox.margin>
+               </Label>
+            </children>
+         </VBox>
+      </AnchorPane>
+   </content>
+   <buttonTypes>
+      <ButtonType fx:constant="FINISH" />
+      <ButtonType fx:constant="CANCEL" />
+   </buttonTypes>
+</DialogPane>
