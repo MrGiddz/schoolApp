@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.viewTables.TransactionHistory">
+   <children>
+      <AnchorPane fx:id="tableAnchor" layoutX="40.0" layoutY="25.0" prefHeight="568.0" prefWidth="1002.0" styleClass="dashboard-cards-body">
+         <children>
+            <AnchorPane fx:id="tableAnchorHeader" prefHeight="67.0" prefWidth="1002.0" styleClass="dashboard-cards-header">
+               <children>
+                  <ButtonBar fx:id="searchBar" buttonMinWidth="10.0" layoutX="40.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="320.0">
+                     <buttons>
+                        <JFXTextField fx:id="searchField" focusColor="#dae7fe" prefHeight="39.0" prefWidth="307.0" promptText="SEARCH BY STUDENT'S NAME OR ID" unFocusColor="WHITE">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="20" />
+                     </buttons>
+                  </ButtonBar>
+                  <JFXButton fx:id="printGeneralReport" buttonType="RAISED" layoutX="795.0" layoutY="18.0" prefHeight="31.0" prefWidth="171.0" styleClass="view-student-print-button" text="Print General Report">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <effect>
+                  <DropShadow color="#969191" />
+               </effect>
+            </AnchorPane>
+            <ScrollPane fx:id="tableScrollPane" layoutY="68.0" prefHeight="515.0" prefWidth="1002.0">
+               <content>
+                  <JFXTreeTableView fx:id="treeView" onMouseClicked="#loadInfo" prefHeight="510.0" prefWidth="1000.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

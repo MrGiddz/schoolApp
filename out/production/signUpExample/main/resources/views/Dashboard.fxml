@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="dashboardMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1230.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.dashboards.Dashboard">
+   <left>
+      <VBox fx:id="dashboardSidebar" prefHeight="690.0" prefWidth="162.0" spacing="5.0" styleClass="dashboard-sideNav" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <JFXButton fx:id="home" buttonType="RAISED" maxHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showMain" prefHeight="50.0" prefWidth="162.0" styleClass="dashboard-button" text="HOME">
+               <graphic>
+                  <FontAwesomeIconView glyphName="DASHBOARD" size="20" styleClass="dashboard-icons" />
+               </graphic>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="viewSchools" buttonType="RAISED" maxHeight="-Infinity" minWidth="-Infinity" onAction="#sideBarHandler" prefHeight="50.0" prefWidth="162.0" styleClass="dashboard-button" text="SCHOOLS">
+               <graphic>
+                  <FontAwesomeIconView glyphName="EYE" styleClass="dashboard-icons" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="viewStudents" buttonType="RAISED" graphicTextGap="1.0" maxHeight="-Infinity" minWidth="-Infinity" onAction="#sideBarHandler" prefHeight="50.0" prefWidth="162.0" styleClass="dashboard-button" text="STUDENTS">
+               <graphic>
+                  <FontAwesomeIconView glyphName="GRADUATION_CAP" styleClass="dashboard-icons" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="viewPayments" buttonType="RAISED" maxHeight="-Infinity" minWidth="-Infinity" onAction="#sideBarHandler" prefHeight="50.0" prefWidth="162.0" styleClass="dashboard-button" text="VIEW PAYMENTS">
+               <graphic>
+                  <FontAwesomeIconView glyphName="MONEY" styleClass="dashboard-icons" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="logout" buttonType="RAISED" maxHeight="-Infinity" minWidth="-Infinity" onAction="#sideBarHandler" prefHeight="50.0" prefWidth="162.0" styleClass="dashboard-button" text="LOGOUT">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ARROW_LEFT" styleClass="dashboard-icons" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <BorderPane prefHeight="40.0" prefWidth="1000.0" styleClass="dashboard-headbar" BorderPane.alignment="CENTER_RIGHT">
+         <center>
+            <Label alignment="CENTER" text="STUDENT RECORD MANAGEMENT SOFTWARE" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Segoe WP Semibold" size="18.0" />
+               </font>
+            </Label>
+         </center>
+         <right>
+            <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="120.0" BorderPane.alignment="TOP_RIGHT">
+               <children>
+                  <FontAwesomeIconView fx:id="minimize" fill="WHITE" glyphName="MINUS" onMouseClicked="#minimizeApp" size="20" styleClass="minimize-button">
+                     <HBox.margin>
+                        <Insets right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fx:id="close" fill="WHITE" glyphName="TIMES" onMouseClicked="#closeAction" size="20" styleClass="close-button">
+                     <HBox.margin>
+                        <Insets right="15.0" top="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+               </children>
+            </HBox>
+         </right>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#969191" />
+         </effect>
+      </BorderPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="700.0" prefWidth="1090.0" styleClass="body" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

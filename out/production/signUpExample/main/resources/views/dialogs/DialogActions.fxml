@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane expanded="true" maxHeight="-Infinity" minHeight="-Infinity" styleClass="dashboard-cards-body" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.dialogs.DialogActions">
+   <content>
+      <VBox fx:id="actionsPane" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="subjectSchoolField" focusColor="#4889fe" labelFloat="true" prefHeight="40.0" prefWidth="350.0" promptText="NAME">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" focusColor="#4889fe" labelFloat="true" promptText="PASSWORD">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="confirmPassword" focusColor="#4889fe" labelFloat="true" promptText="CONFIRM PASSWORD">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+            <JFXComboBox fx:id="schoolSelect" focusColor="#4889fe" labelFloat="true" prefHeight="37.0" prefWidth="350.0" promptText="SELECT SCHOOL">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <JFXComboBox fx:id="subjectSelect" focusColor="#4889fe" labelFloat="true" prefHeight="37.0" prefWidth="350.0" promptText="SELECT SUBJECT">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <JFXComboBox fx:id="classSelect" focusColor="#4889fe" labelFloat="true" prefHeight="37.0" prefWidth="350.0" promptText="SELECT CLASS">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <JFXRadioButton fx:id="compulsory" contentDisplay="RIGHT" graphicTextGap="20.0" prefHeight="21.0" prefWidth="346.0" style="-jfx-selected-color: #4889fe;" text="Compulsory?">
+               <graphic>
+                  <Label fx:id="radioLabel" graphicTextGap="10.0" text="No" />
+               </graphic>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXRadioButton>
+            <JFXTextField fx:id="tuition" focusColor="#4889fe" labelFloat="true" promptText="TUITION">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+         </children>
+      </VBox>
+   </content>
+   <ButtonType fx:constant="FINISH" />
+   <ButtonType fx:constant="CANCEL" />
+</DialogPane>
